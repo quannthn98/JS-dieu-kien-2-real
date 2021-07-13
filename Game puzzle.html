@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game pulle</title>
+  <style>
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
+</head>
+<body>
+<table id="demo">
+  <tr>
+    <td>
+      <div>
+        <img class="pic" id = "1" src="dog2.1.png" onclick="changePic1()">
+      </div>
+    </td>
+    <td>
+      <div>
+        <img class="pic" id="2" src="dog3.1.jpeg" onclick="changePic2()">
+      </div>
+    </td>
+  </tr>
+</table>
+<script>
+  let isPic1 = false;
+  let isPic2 = false;
+  function changePic1(){
+
+    let b = Math.floor(Math.random() * 4 + 1);
+    switch (b){
+      case 1:
+        document.getElementById("1").src = "dog1.2.png";
+        isPic1 = true;
+        break;
+
+      case 2:
+        document.getElementById("1").src = "dog2.1.png";
+        isPic1 = false;
+        break;
+
+      case 3:
+        document.getElementById("1").src = "dog3.1.jpeg";
+        isPic1 = false;
+        break;
+    }
+    checkResult()
+  }
+  function changePic2(){
+
+    let c = Math.floor(Math.random()*4 + 1);
+    switch (c){
+      case 1:
+        document.getElementById("2").src = "dog1.1.jpg"
+        isPic2 = true;
+        break;
+      case 2:
+        document.getElementById("2").src = "dog2.2.jpg"
+        isPic2 = false;
+        break;
+      case 3:
+        document.getElementById("2").src = "dog3.2.png"
+        isPic2 = false;
+        break;
+    }
+    checkResult()
+  }
+  function checkResult(){
+    if (isPic1 && isPic2){
+      document.getElementById("1").style.border = "2px solid red"
+      document.getElementById("2").style.border = "2px solid red"
+      alert('solved')
+    }
+  }
+</script>
+
+
+
+
+</body>
+</html>
+</body>
+</html>

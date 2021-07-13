@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+</head>
+<body onload="check()">
+<h1>Bạn muốn tìm mua điện thoại như thế nào?</h1>
+<!--  <button type="button" onclick="checkbox()"> click</button>-->
+<input type="checkbox" onclick="check(1)" style="width: 50px" id = "1" > Good <br>
+<input type="checkbox" onclick="check(2)" style="width: 50px" id = "2" > Fast <br>
+<input type="checkbox" onclick="check(3)" style="width: 50px" id = "3" > Cheap <br>
+
+<script>
+
+  function check(abc) {
+    let checkBar1 = document.getElementById("1");
+    let checkBar2 = document.getElementById("2");
+    let checkBar3 = document.getElementById("3");
+    if (abc == 1){
+      if (checkBar2.checked === true && checkBar3.checked === true){
+        checkBar3.checked = false;
+      }
+    // } else if (abc == 2){
+    //   if (checkBar1.checked === true && checkBar3.checked === true) {
+    //     checkBar1.checked = false;
+    //   }
+    // } else if (abc == 3) {
+    //   if (checkBar1.checked === true && checkBar2.checked === true) {
+    //     checkBar2.checked = false;
+    //   }
+    // }
+  }
+
+</script>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

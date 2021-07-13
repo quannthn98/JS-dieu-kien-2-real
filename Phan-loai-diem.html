@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phan loai diem</title>
+</head>
+<body>
+<script>
+    let diem = prompt('nhap vao diem')
+    if ( diem === ''){
+        alert('ban chua nhap diem')
+    } else if (diem <= 5 && diem >=0){
+        alert('HS khong dat');
+    } else if (diem <= 7){
+        alert('hs đạt');
+    } else if (diem <= 10){
+        alert('Tốt');
+    } else {
+        alert('Vui lòng nhập vào điểm trong khoảng từ 0 - 10');
+    }
+    // } else if(diem == ''){
+    //     alert(' ban chua nhap diem ')
+    // }
+</script>
+</body>
+</html>

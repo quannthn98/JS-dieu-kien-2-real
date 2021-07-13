@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Size quần áo</title>
+</head>
+<fomr>
+    <select name="gender" id="gender">
+        <option value="nam">Nam</option>
+        <option value="nu">Nu</option>
+    </select>
+    <input type="number" id="height" placeholder="Chieu cao">
+    <input type="number" id="weight" placeholder="Can nang">
+    <button type="button" onclick="chonSize()"> Chon size</button>
+</fomr>
+<body>
+<script>
+    function chonSize() {
+        let gender = document.getElementById("gender").value;
+        let weight = parseInt(document.getElementById("weight").value);
+        let height = parseInt(document.getElementById("height").value);
+        if (weight == undefined || height == undefined){
+            alert('Ban vui long nhap lai diem')
+        }
+        if (gender === "nam") {
+            if (weight >= 55 && weight <= 60 && height >= 160 && height <= 165){
+                alert('Ban nen chon size S')
+            } else if (weight <= 65 && height <= 169){
+                alert('Ban nen chon size M')
+            } else if (weight <= 70 && height <= 174){
+                alert('Ban nen chon size L')
+            } else if (weight <= 76 && height <= 176) {
+                alert('Ban nen chon size XL')
+            } else if (weight <= 80 && height <= 177){
+                alert('Ban nen chon size XXL')
+            } else {
+                alert('Ban beo vcl, ko mua dc quan ao')
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

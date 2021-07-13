@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phan loai size</title>
+</head>
+<body>
+<input type="text" id="demo">
+<button type="button" onclick="hienthi()"> CLick</button>
+<p id = "chieucao">Chieu cao:</p>
+<p id= "cangnang">Cang nang:</p>
+<script>
+
+  // let size = prompt('nhap Size');
+  function hienthi() {
+
+      let size = document.getElementById("demo").value;
+      let chieuCaoMax;
+      let chieuCaoMin;
+      let canNangMax;
+      let canNangMin;
+      switch (size) {
+          case "S":
+              chieuCaoMin = 160;
+              chieuCaoMax = 165;
+              canNangMin = 55;
+              canNangMax = 60;
+
+              break;
+          case "M":
+              chieuCaoMin = 164;
+              chieuCaoMax = 169;
+              canNangMin = 60;
+              canNangMax = 65;
+
+              break;
+          case "L":
+              chieuCaoMin = 170;
+              chieuCaoMax = 174;
+              canNangMin = 66;
+              canNangMax = 70;
+
+              break;
+          case "XL":
+              chieuCaoMin = 174;
+              chieuCaoMax = 176;
+              canNangMin = 70;
+              canNangMax = 76;
+
+              break;
+
+      }
+      document.getElementById("chieucao").innerHTML = " Chieu cao: " + chieuCaoMin + " - " + chieuCaoMax;
+      document.getElementById("cangnang").innerHTML = " Can nang: " + canNangMin + " - " + canNangMax;
+  }
+</script>
+</body>
+</html>

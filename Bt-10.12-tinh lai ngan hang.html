@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh lai ngan hang</title>
+    <style>
+      input{
+        position: relative;
+        right: 0px;
+      }
+    </style>
+</head>
+<body>
+<!--Nhập vào số tiền muốn vay-->
+Nhập số tiền muốn vay:
+<input type="number" id ="tienvay" > <br>
+<!--Nhập vào lãi suất của ngân hàng-->
+Nhập vào lãi vay:
+<input type="number" id="lai" > <br>
+<!--Nhập vào số năm muốn vay-->
+Số năm muốn vay:
+<input type="number" id="sonam"> <br>
+
+<button type="button" onclick="tinhLai()"> Tính lãi vay</button>
+
+<script>
+
+  function tinhLai(){
+    let soTien = parseInt(document.getElementById("tienvay").value);
+    let laiSuat = parseInt(document.getElementById("lai").value);
+    let soNam = parseInt(document.getElementById("sonam").value);
+    let phaiTra;
+    phaiTra = soTien*((1+laiSuat/100)**soNam);
+    alert(phaiTra);
+  }
+</script>
+
+</body>
+</html>

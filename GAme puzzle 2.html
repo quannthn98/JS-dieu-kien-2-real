@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game pulle</title>
+  <style>
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
+</head>
+<body>
+<table id="demo">
+  <tr>
+    <td>
+        <img id = "1" src="dog2.1.png" onclick="changePic1(1)">
+    </td>
+    <td>
+        <img  id="2" src="dog3.1.jpeg" onclick="changePic1(2)">
+    </td>
+  </tr>
+</table>
+
+<script>
+  let isPic11=false;
+  let isPic12=false;
+  let isPic21=false;
+  let isPic22=false;
+  let isPic31=false;
+  let isPic32=false;
+  function changePic1(value){
+    let pickPic1 = 1;
+    let pickPic2 = 1;
+    let a;
+    switch(value){
+      case 1:
+
+        pickPic1 = Math.floor(Math.random() * 4) + 1;
+
+        if (a == pickPic1){
+          pickPic1 = Math.floor(Math.random() * 4) + 1;
+        }
+        if (pickPic1 == 1){
+          document.getElementById("1").src = "dog1.2.png"
+          isPic11 = true;
+          isPic21 = false;
+          isPic31 = false;
+        } else if (pickPic1 == 2){
+          document.getElementById("1").src = "dog2.1.png"
+          isPic11 = false;
+          isPic21 = true;
+          isPic31 = false;
+        } else {
+          document.getElementById("1").src = "dog3.1.jpeg"
+          isPic11 = false;
+          isPic21 = false;
+          isPic31 = true;
+        }
+        a = pickPic1
+        checkResult()
+        break;
+      case 2:
+        pickPic2 = Math.floor(Math.random() * 4) + 1;
+        if (pickPic2 == 1){
+          document.getElementById("2").src = "dog1.1.jpg"
+          isPic12 = true;
+          isPic22 = false;
+          isPic32 = false;
+        } else if (pickPic2 == 2){
+          document.getElementById("2").src = "dog2.2.jpg"
+          isPic12 = false;
+          isPic22 = true;
+          isPic32 = false
+        } else {
+          document.getElementById("2").src = "dog3.2.png"
+          isPic12 = false;
+          isPic22 = false
+          isPic32 = true;
+        }
+        checkResult()
+        break;
+
+    }
+    function checkResult(){
+      if (isPic11 && isPic12 || isPic21 &&isPic22 || isPic31 && isPic32){
+        document.getElementById("1").style.border = "2px solid red"
+        document.getElementById("2").style.border = "2px solid red"
+      } else {
+        document.getElementById("1").style.border = "0"
+        document.getElementById("2").style.border = "0"
+      }
+    }
+  }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
